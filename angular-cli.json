@@ -21,47 +21,48 @@
         "styles.css"
       ],
       "scripts": [],
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+      "dev": "environments/environment.ts",
+      "prod": "environments/environment.prod.ts"
+}
     }
   ],
   "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
+  "protractor": {
+    "config": "./protractor.conf.js"
+  }
+},
+"lint": [
+  {
+    "project": "src/tsconfig.app.json"
   },
-  "lint": [
-    {
-      "files": "src/**/*.ts",
-      "project": "src/tsconfig.json"
-    },
-    {
-      "files": "e2e/**/*.ts",
-      "project": "e2e/tsconfig.json"
-    }
-  ],
-  "test": {
-    "karma": {
-      "config": "./karma.conf.js"
-    }
+  {
+    "project": "src/tsconfig.spec.json"
   },
-  "defaults": {
-    "styleExt": "css",
-    "prefixInterfaces": false,
-    "inline": {
-      "style": false,
-      "template": false
-    },
-    "spec": {
-      "class": false,
-      "component": true,
-      "directive": true,
-      "module": false,
-      "pipe": true,
-      "service": true
-    }
+  {
+    "project": "e2e/tsconfig.e2e.json"
+  }
+],
+"test": {
+  "karma": {
+    "config": "./karma.conf.js"
+  }
+},
+"defaults": {
+"styleExt": "css",
+"prefixInterfaces": false,
+"inline": {
+  "style": false,
+  "template": false
+},
+"spec": {
+  "class": false,
+  "component": true,
+  "directive": true,
+  "module": false,
+  "pipe": true,
+  "service": true
+}
   }
 }
